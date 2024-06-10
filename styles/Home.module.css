@@ -1,0 +1,89 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #daddb0;
+}
+
+.section {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #b48a41;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.callToAction {
+  text-align: center;
+}
+
+.button {
+  background: #db9f1f;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid;
+  border-color: #8a610a;
+  border-width: 3px;
+}
+
+.button:hover {
+  background: #f0b924;
+}
+
+.testimonials blockquote {
+  border-left: 5px solid #db9f1f;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.testimonials cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.faq h3 {
+  margin-top: 1rem;
+  color: #8a610a;
+}
+
+.faq p {
+  margin: 0.5rem 0;
+}

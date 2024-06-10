@@ -25,9 +25,16 @@
   color: #daddb0;
 }
 
+.section_container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between sections */
+  flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+}
+
 .section {
-  width: 100%;
-  max-width: 800px;
+  flex: 1;
+  max-width: 48%; /* Adjust width as needed */
   margin: 2rem 0;
   padding: 2rem;
   background: #b48a41;

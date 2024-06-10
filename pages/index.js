@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
         <section className={styles.section}>
-          <h2>So then... is it a yes?</h2>
+          <h2>So then... is it a "yes"?</h2>
           <p>Will you join this brand new opportunity to share your music without worrying about the bullshit?</p>
           <button className={styles.button}>Sign Up Now</button>
         </section>

@@ -15,7 +15,12 @@ body {
 }
 
 a {
-  color: #ebba34; /* Theme color for links */
+  color: #e6ca7f;
+  transition: color 0.4s ease;
+}
+
+a:hover {
+  color: #ffbf00;
 }
 
 .container {

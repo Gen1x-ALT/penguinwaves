@@ -8,7 +8,7 @@ export default function Header({ title }) {
           color: #ebba34;
           font-size: 3rem;
           margin-bottom: 0;
-          font-family: "Tiny5", sans-serif;
+          font-family: "VT323", monospace;
           font-weight: 400;
           font-style: normal;
         }

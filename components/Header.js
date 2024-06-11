@@ -10,7 +10,9 @@ export default function Header({ title }) {
           margin-bottom: 0;
           font-family: "VT323", monospace;
           font-weight: 400;
+          font-size: 5em;
           font-style: normal;
+          text-align: center;
         }
       `}</style>
     </header>

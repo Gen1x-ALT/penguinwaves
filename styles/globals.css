@@ -1,3 +1,4 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://unpkg.com/7.css@0.16.0/dist/gui/scrollbar.css');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
@@ -42,4 +43,26 @@ main {
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+}
+
+/* Button Design */
+.button {
+  background-color: #333;
+  color: #ffffff;
+  border: 2px solid #e6ca7f;
+  padding: 0.5rem 1rem;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #444;
+  color: #ffbf00;
+  border-color: #ffbf00;
 }

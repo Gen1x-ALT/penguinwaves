@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
     axios.defaults.withCredentials = true;
 
     const res = await axios.get(
-      "https://pwaves-backend.vercel.app/auth/user/info",
+      "https://api.allorigins.win/raw?url=https://pwaves-backend.vercel.app/auth/user/info",
       {
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON

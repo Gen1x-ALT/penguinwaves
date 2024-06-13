@@ -1,22 +1,37 @@
 import { useRouter } from 'next/router';
+import { useUser } from '@auth0/nextjs-auth0/client';
 
 export default function Header({ title }) {
   const router = useRouter();
   const { pathname } = router;
+  const { user, error, isLoading } = useUser();
 
   return (
     <header>
-      <center><p>This entire platform is in its early stages. This means that you might find more errors.</p></center>
+      <center>
+        <p>This entire platform is in its early stages. This means that you might find more errors.</p>
+      </center>
       <nav className="navbar">
         <ul className="nav-list">
           <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
             <a href="/">Home</a>
           </li>
-          <li className={`nav-item ${pathname === '/auth' ? 'active' : ''}`}>
-            <a href="/api/auth/login">Sign in or Log in</a>
-          </li>
+          {user ? (
+            <li className={`nav-item ${pathname === '/profile' ? 'active' : ''}`}>
+              <a href="/api/auth/logout">Logout</a>
+            </li>
+          ) : (
+            <li className={`nav-item ${pathname === '/auth' ? 'active' : ''}`}>
+              <a href="/api/auth/login">Sign in or Log in</a>
+            </li>
+          )}
         </ul>
       </nav>
+      {user && (
+        <div className="welcome-message">
+          <p>Welcome, {user.name}!</p>
+        </div>
+      )}
       <h1 className="header-title">{title}</h1>
       <style jsx>{`
         .header-title {
@@ -60,6 +75,12 @@ export default function Header({ title }) {
         .nav-item.active a {
           background-color: #575757;
           color: #ebba34;
+        }
+        .welcome-message {
+          text-align: center;
+          color: #ebba34;
+          font-family: "Inconsolata", monospace;
+          margin-top: 1rem;
         }
       `}</style>
     </header>

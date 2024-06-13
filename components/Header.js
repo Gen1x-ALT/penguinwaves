@@ -13,7 +13,7 @@ export default function Header({ title }) {
             <a href="/">Home</a>
           </li>
           <li className={`nav-item ${pathname === '/auth' ? 'active' : ''}`}>
-            <a href="/auth">Sign in or Log in</a>
+            <a href="/api/auth/login">Sign in or Log in</a>
           </li>
         </ul>
       </nav>

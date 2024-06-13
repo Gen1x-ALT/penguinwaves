@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
     axios.defaults.withCredentials = true;
 
     const res = await axios.get(
-      "https://api.allorigins.win/raw?url=https://pwaves-backend.vercel.app/auth/user/info",
+      "https://pwaves-backend.vercel.app/auth/user/info",
       {
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -23,6 +23,7 @@ export async function getServerSideProps(context) {
     }
 
     const userInfo = res.data;
+    console.log(userInfo)
 
     // Save user info in the session
     context.res.setHeader(
@@ -33,7 +34,7 @@ export async function getServerSideProps(context) {
     // Redirect to the homepage
     return {
       redirect: {
-        destination: "/",
+        destination: "discord-thanks",
         permanent: false,
       },
     };

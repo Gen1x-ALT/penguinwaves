@@ -14,7 +14,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header title="Log in" />
         <section className={styles.intro}>
-          <p className={styles.description}>Pick an authentication method</p>
+          <p className={styles.description}>Pick an authentication method.</p>
+          <i className="description">This is not required, only artists need an account!<br></br>If you don't want to upload anything to the platform, you can skip right ahead to <a href="/interface">the interface</a>.</i>
         </section>
 
         <div>

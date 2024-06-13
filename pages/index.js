@@ -50,7 +50,7 @@ export default function Home() {
         <section className={styles.section}>
           <h2>So then... is it a "yes"?</h2>
           <p>Will you join this brand new opportunity to share your music without worrying about the bullshit?</p>
-          <button className={styles.button}>Sign Up Now</button>
+          <button className={styles.button}><a href="interface" style={{'color': "white", 'text-decoration': "none"}}>Experience something unique</a></button>
         </section>
       </main>
 

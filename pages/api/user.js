@@ -6,13 +6,13 @@ export default async function handler(req, res) {
     try {
       const options = {
         method: 'POST',
-        url: 'https://dev-shvzsx4icizctmai.us.auth0.com/api/v2/oauth/token',
+        url: 'https://dev-shvzsx4icizctmai.us.auth0.com/oauth/token',
         headers: {'content-type': 'application/x-www-form-urlencoded'},
         data: new URLSearchParams({
           grant_type: 'client_credentials',
           client_id: process.env.AUTH0_CLIENT_ID,
           client_secret: process.env.AUTH0_CLIENT_SECRET,
-          audience: 'https://dev-shvzsx4icizctmai.us.auth0.com/api/v2/'
+          audience: 'http://many-things.hstn.me/'
         })
       };
 

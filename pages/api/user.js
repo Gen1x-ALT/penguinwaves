@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     try {
       const options = {
         method: 'POST',
-        url: 'https://dev-shvzsx4icizctmai.us.auth0.com/oauth/token',
+        url: 'https://dev-shvzsx4icizctmai.us.auth0.com/api/v2/oauth/token',
         headers: {'content-type': 'application/x-www-form-urlencoded'},
         data: new URLSearchParams({
           grant_type: 'client_credentials',

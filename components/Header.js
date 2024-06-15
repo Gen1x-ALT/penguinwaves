@@ -16,7 +16,11 @@ export default function Header({ title }) {
           <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
             <a href="/">Home</a>
           </li>
-          {user ? (
+          {isLoading ? (
+            <li className="nav-item">
+              <div className="loader"></div>
+            </li>
+          ) : user ? (
             <li className={`nav-item ${pathname === '/profile' ? 'active' : ''}`}>
               <a href="/api/auth/logout">Logout</a>
             </li>
@@ -27,7 +31,7 @@ export default function Header({ title }) {
           )}
         </ul>
       </nav>
-      {user && (
+      {user && !isLoading && (
         <div className="welcome-message">
           <p>Welcome, {user.name}!</p>
         </div>
@@ -81,6 +85,10 @@ export default function Header({ title }) {
           color: #ebba34;
           font-family: "Inconsolata", monospace;
           margin-top: 1rem;
+        }
+
+        .loader {
+          top: 15px;
         }
       `}</style>
     </header>

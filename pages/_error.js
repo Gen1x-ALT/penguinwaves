@@ -8,10 +8,6 @@ import Footer from "../components/Footer";
 const MyError = ({ statusCode }) => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>PenguinWaves</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className={styles.main}>
         <Header title="Whoops... We fucked up." />
         <p>
